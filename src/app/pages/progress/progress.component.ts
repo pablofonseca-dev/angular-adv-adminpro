@@ -8,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
 
+  progressOne: number = 0;
+  progressTwo: number = 0;
+
+  onProgressOneChange(newValue: number) {
+    this.progressOne = newValue;
+  }
+
+  onProgressTwoChange(newValue: number) {
+    this.progressTwo = newValue;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
