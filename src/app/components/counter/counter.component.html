@@ -1,0 +1,18 @@
+<!-- The input group -->
+
+<div class="input-group">
+    <span class="input-group-btn">
+        <button class="h-100 btn" type="button" [ngClass]="this.buttonStyleClasses"
+            (mousedown)="this.onMouseDown(-this.steps)" (mouseup)="this.onMouseUp()">
+            <i class="fa fa-minus"></i>
+        </button>
+    </span>
+    <input [ngClass]="{'is-invalid': this.isProgressInvalid()}" type="text" class="form-control"
+        [(ngModel)]="this.count" (ngModelChange)="this.onModelChange()">
+    <span class="input-group-btn">
+        <button class="h-100 btn" type="button" [ngClass]="this.buttonStyleClasses"
+            (mousedown)="this.onMouseDown(this.steps)" (mouseup)="this.onMouseUp()">
+            <i class="fa fa-plus"></i>
+        </button>
+    </span>
+</div>
