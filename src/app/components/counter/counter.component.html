@@ -8,7 +8,7 @@
         </button>
     </span>
     <input [ngClass]="{'is-invalid': this.isProgressInvalid()}" type="text" class="form-control"
-        [(ngModel)]="this.count">
+        [(ngModel)]="this.count" (ngModelChange)="this.onValueChange($event)">
     <span class="input-group-btn">
         <button class="h-100 btn" type="button" [ngClass]="this.buttonStyleClasses"
             (mousedown)="this.onMouseDown(this.steps)" (mouseup)="this.onMouseUp()">

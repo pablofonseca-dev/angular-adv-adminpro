@@ -65,6 +65,8 @@ export class CounterComponent implements OnInit {
    * @returns {void} returns nothing.
    */
   onMouseDown(newValue: number): void {
+    if (typeof (this.count) === 'string') // This is a hack to fix the issue with the input type="number"
+      this.count = parseInt(this.count);
     this.changeValue(newValue);
     this.isMouseDown = true;
     this.startMouseDownTimer(newValue);
@@ -104,6 +106,11 @@ export class CounterComponent implements OnInit {
     this.isMouseDown = false;
     this.isMouseDownForLongTime = false;
     clearInterval(this.counterInterval);
+  }
+
+  onValueChange(newValue: number): void {
+    this.setCount(newValue);
+    this.onCountChange.emit(this.count);
   }
 
   constructor() {
