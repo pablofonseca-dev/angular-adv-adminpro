@@ -1,1 +1,33 @@
-<p>graphic-one works!</p>
+<div class="row justify-content-center">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <app-doughnut title="Title Example" [labels]="this.doughnutChartLabels"
+                    [datasets]="this.doughnutDatasets"></app-doughnut>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <app-doughnut [labels]="this.doughnutChartLabels" [datasets]="this.doughnutDatasets"></app-doughnut>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <app-doughnut [labels]="this.doughnutChartLabels" [datasets]="this.doughnutDatasets"></app-doughnut>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <app-doughnut [labels]="this.doughnutChartLabels" [datasets]="this.doughnutDatasets"></app-doughnut>
+            </div>
+        </div>
+    </div>
+</div>

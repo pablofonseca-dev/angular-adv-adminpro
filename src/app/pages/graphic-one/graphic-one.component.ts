@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartData, ChartDataset } from 'chart.js';
+
 
 @Component({
   selector: 'app-graphic-one',
@@ -8,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraphicOneComponent implements OnInit {
 
-  constructor() { }
+  doughnutChartLabels: string[] = [
+    "Download Sales",
+    "In-Store Sales",
+    "Unknown Sales"
+  ];
 
-  ngOnInit(): void {
+  doughnutDatasets: ChartDataset<"doughnut", number[]>[] = [{
+    data: [100, 200, 300],
+    backgroundColor: [
+      "#6857E6",
+      "#009FEE",
+      "#F02059"
+    ]
+  }];
+
+
+  constructor() {
+
   }
 
+  ngOnInit(): void {
+
+  }
 }

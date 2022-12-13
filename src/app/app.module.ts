@@ -6,7 +6,6 @@ import { NgModule } from '@angular/core';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { PagesModule } from './pages/pages.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
